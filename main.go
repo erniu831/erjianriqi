@@ -13,7 +13,7 @@ func main() {
 
 	// 定义路由处理函数
 	router.GET("/", func(c *gin.Context) {
-		remainingDays, remainingHours := timeRemainingUntilDate(time.Date(2023, time.June, 12, 9, 0, 0, 0, time.FixedZone("CST", 8*3600)))
+		remainingDays, remainingHours := timeRemainingUntilDate(time.Date(2023, time.June, 3, 9, 0, 0, 0, time.FixedZone("CST", 8*3600)))
 		// res := fmt.Sprintf()
 		c.String(200, "距离 2023年二级建造师 考试还有%s, 换算成小时还有 %s", remainingDays, remainingHours)
 	})
